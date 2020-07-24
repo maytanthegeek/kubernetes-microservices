@@ -1,0 +1,49 @@
+openapi: 3.0.3
+info:
+  title: post-service
+  version: 1.0.0
+paths:
+  /post:
+    get:
+      description: 'Retrieves a list of all posts.'
+      responses:
+        '200':
+          description: 'List of all posts.'
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: number
+                    title:
+                      type: string
+              example:
+                - id: 0
+                  title: A Monumental Post
+                - id: 1
+                  title: Another Extraordinary Post
+
+  /post/{postId}:
+    get:
+      description: 'Retrieves a post.'
+      responses:
+        '200':
+          description: 'Contents of a post.'
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: number
+                  title:
+                    type: string
+                  content:
+                    type: string
+              example:
+                id: 0
+                title: A Monumental Post
+                content: This post is one small step for a man, a giant leap for mankind.
