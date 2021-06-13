@@ -2,25 +2,25 @@
   "name": "client",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "public/index.html",
   "scripts": {
-    "start": "parcel index.html -d public",
-    "build": "parcel build index.html -d public",
+    "start": "parcel serve index.html",
+    "build": "parcel build index.html",
     "serve": "node app.js"
   },
   "author": "Tanmay",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "phin": "^3.5.0",
-    "pino": "^6.6.1"
+    "phin": "^3.6.0",
+    "pino": "^6.11.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.11.6",
-    "@babel/preset-env": "^7.11.5",
-    "@babel/preset-react": "^7.10.4",
-    "parcel-bundler": "^1.12.4",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "@babel/core": "^7.14.5",
+    "@babel/preset-env": "^7.14.5",
+    "@babel/preset-react": "^7.14.5",
+    "parcel": "^2.0.0-beta.3.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   }
 }

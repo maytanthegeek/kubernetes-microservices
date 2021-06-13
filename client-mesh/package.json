@@ -2,10 +2,10 @@
   "name": "client",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "public/index.html",
   "scripts": {
-    "start": "parcel index.html -d public",
-    "build": "parcel build index.html -d public"
+    "start": "parcel serve index.html",
+    "build": "parcel build index.html"
   },
   "author": "Tanmay",
   "license": "ISC",
@@ -13,7 +13,7 @@
     "@babel/core": "^7.11.6",
     "@babel/preset-env": "^7.11.5",
     "@babel/preset-react": "^7.10.4",
-    "parcel-bundler": "^1.12.4",
+    "parcel": "^2.0.0-beta.3.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   }
