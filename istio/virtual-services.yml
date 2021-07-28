@@ -1,0 +1,34 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: client
+spec:
+  hosts:
+  - "*"
+  gateways:
+  - blog-gateway
+  http:
+  - match:
+    - uri:
+        prefix: /user
+    route:
+    - destination:
+        port:
+          number: 80
+        host: user-service
+  - match:
+    - uri:
+        prefix: /post
+    route:
+    - destination:
+        port:
+          number: 80
+        host: post-service
+  - match:
+    - uri:
+        prefix: /
+    route:
+    - destination:
+        port:
+          number: 8080
+        host: client-service
