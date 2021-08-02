@@ -1,5 +1,13 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-  - namespace.yml
-  - istio/istio-operator-profile.yml
+- namespace.yml
+- istio/istio-operator-profile.yml
+- deployment-client.yml
+- deployment-post.yml
+- deployment-user.yml
+- service-client.yml
+- service-post.yml
+- service-user.yml
+- istio/gateway.yml
+- istio/virtual-services.yml
