@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: client-service
+  namespace: blog
 spec:
   replicas: 3
   selector:
