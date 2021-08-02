@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: client-service
-        image: maytanthegeek/microservice-client:1.0.0-mesh
+        image: maytanthegeek/microservice-client:1.0.0
         imagePullPolicy: Always
         resources:
           limits:
